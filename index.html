@@ -15,8 +15,6 @@ permalink: /
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% if site.url %}<link rel="canonical" href="{{ site.url }}">{% endif %}
   {% include analytics.html %}
-<script>document.getElementsByTagName("html")[0].className += " js";</script>
-<link rel="stylesheet" href="assets/css/style.css">
 
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicons/apple-touch-icon.png">
@@ -91,6 +89,18 @@ permalink: /
         <span class="d-inline d-sm-none">{{ linkInfo[1].name }}</span></a></div>
 {% endif %}{% endfor %}{% endfor %}
 </div>
+
+{% if site.extra_html %}
+<div class="row justify-content-center">
+    <div class="col mt-3 text-sm-center fuse-core-extra">{{ site.extra_html }}</div>
+</div>
+{% endif %}
+
+</div>
+</div>
+	
+<script>document.getElementsByTagName("html")[0].className += " js";</script>
+<link rel="stylesheet" href="assets/css/style.css">
 
   </header>
 
@@ -193,14 +203,6 @@ permalink: /
     </div>
   </section> <!-- cd-timeline -->
   <script src="assets/js/main.js"></script>
-</div>
-
-{% if site.extra_html %}
-<div class="row justify-content-center">
-    <div class="col mt-3 text-sm-center fuse-core-extra">{{ site.extra_html }}</div>
-</div>
-{% endif %}
-
 </div>
 </div>
 
